@@ -83,3 +83,37 @@ console.log(typeof x)
 
 //Method to know the length of array
 console.log("The lenght of array is", x.length)
+
+//Loops in array
+//Array Map Method
+
+let arr = [45, 55, 65]
+let a = arr.map((value, index, array) => {
+  console.log(value+1, index, array)
+  return value + 1
+})
+console.log(a)
+
+//Array Filter Method
+//Donot changes original array 
+let arr2 = [45,55,66,88,99,77,55]
+let a2
+  = arr2.filter((a, index)=>{
+  return a<70
+})
+console.log(a2)
+
+//Array Reduce Method 
+let arr3 = [4,4,5,58,9,6]
+const arr_func = (j1,h2)=>{
+  return j1+h2
+}
+let newarr3 = arr3.reduce(arr_func)
+console.log(newarr3)
+
+//02 way to do reduce method 
+let arr4 = [4,4,5,58,9,6]
+let newarr4 = arr4.reduce((h1,h2)=>{
+  return h1 +h2 ;
+})
+  console.log(newarr4)
